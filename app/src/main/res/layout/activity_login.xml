@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg7"
+    tools:context="com.theta_edge.barcode.Login">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="No Pengguna"
+        android:ems="10"
+        android:id="@+id/noPengguna"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:text="830822086150" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/kataLaluan"
+        android:layout_below="@+id/noPengguna"
+        android:layout_centerHorizontal="true"
+        android:hint="kata laluan"
+        android:text="password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Masuk"
+        android:id="@+id/buttonLogIn"
+        android:onClick="login"
+        android:layout_below="@+id/kataLaluan"
+        android:layout_alignEnd="@+id/kataLaluan"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView2"
+        android:text="Selamat Datang"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignEnd="@+id/noPengguna"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:layout_alignStart="@+id/noPengguna" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:layout_marginTop="101dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/onespeks_logo"
+        android:layout_alignEnd="@+id/noPengguna"
+        android:layout_alignStart="@+id/buttonLogIn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:src="@drawable/perak"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_toStartOf="@+id/imageView5" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_toStartOf="@+id/buttonLogIn"
+        android:visibility="gone"
+        android:layout_below="@+id/kataLaluan" />
+
+</RelativeLayout>

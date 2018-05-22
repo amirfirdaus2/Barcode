@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">1SPEKS-Barcode</string>
+    <string name="login">Daftar masuk</string>
+    <string name="assetInspect1">Pemeriksa Dalam</string>
+    <string name="assetInspect2">Pemeriksa Luar</string>
+    <string name="setting">Tetapan</string>
+    <string name="displayData">Butir Pengguna</string>
+    <string name="copyright">Hak Cipta Terpelihara 2017 © JANM</string>
+    <string name="notes">Catatan</string>
+
+    <string name="dialognoNetwork">Tiada sambungan dengan rangkaian</string>
+    <string name="dialogNetwork">Rangkaian</string>
+    <string name="dialognoData">Tiada data diperolehi</string>
+    <string name="webservice">1SPEKS Web Services</string>
+    <string name="ok">OK</string>
+    <string name="wronginput">DATA TIDAK TEPAT</string>
+    <string name="cancel">BATAL</string>
+    <string name="serialno">serial Number</string>
+    <string name="assetname">asset Name</string>
+    <string name="origLoc">original Location</string>
+    <string name="officername">officer Name</string>
+    <string name="scanDate">scan dates</string>
+
+    <string-array name="cadangan">
+        <item>YA</item>
+        <item>TIDAK</item>
+    </string-array>
+
+    <string name="action_settings">Tetapan</string>
+</resources>

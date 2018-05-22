@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg7"
+    android:orientation="horizontal"
+    tools:context=".InternalInspection"
+    android:nestedScrollingEnabled="true">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/btn_simpan"
+        android:clickable="true"
+        android:onClick="simpan"
+        android:layout_below="@+id/spinner_keadaanAset"
+        android:layout_alignStart="@+id/button4"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imbas"
+        android:id="@+id/button4"
+        android:clickable="true"
+        android:onClick="kePengimbas2"
+        android:layout_marginTop="49dp"
+        android:layout_alignTop="@+id/btn_simpan"
+        android:background="@drawable/buttonshape"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Keluar"
+        android:id="@+id/button5"
+        android:clickable="true"
+        android:onClick="logKeluar"
+        android:layout_below="@+id/button4"
+        android:layout_alignStart="@+id/button4"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/notes"
+        android:hint="Catatan"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:nestedScrollingEnabled="true"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@+id/btn_simpan"
+        android:layout_alignTop="@+id/btn_simpan" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No Siri Aset :"
+        android:id="@+id/nosiri"
+        android:textColor="@color/red"
+        android:layout_below="@+id/scanDate"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/displaynosiri"
+        android:hint="@string/serialno"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:textStyle="normal"
+        android:nestedScrollingEnabled="true"
+        android:singleLine="false"
+        android:gravity="left"
+        android:layout_alignEnd="@+id/spinner_keadaanAset"
+        android:layout_toEndOf="@+id/nosiri"
+        android:layout_alignStart="@+id/displayscanDate"
+        android:layout_alignTop="@+id/nosiri"
+        android:layout_alignBottom="@+id/displayassetname" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nama Aset :"
+        android:id="@+id/asetname"
+        android:textColor="@color/red"
+        android:layout_above="@+id/officername"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nama Pegawai :"
+        android:id="@+id/officername"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:layout_alignTop="@+id/spinner_namaPegawai"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lokasi Asal :"
+        android:id="@+id/originalLoc"
+        android:textColor="@color/red"
+        android:layout_above="@+id/displaycurrLoc"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/displaycurrLoc"
+        android:hint="@string/origLoc"
+        android:textStyle="normal"
+        android:singleLine="false"
+        android:nestedScrollingEnabled="true"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_alignEnd="@+id/spinner_keadaanAset"
+        android:layout_toEndOf="@+id/scanDate"
+        android:layout_above="@+id/currentLoc"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lokasi Baru :"
+        android:id="@+id/currentLoc"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:layout_alignTop="@+id/spinner_lokasiBaru"
+        android:layout_alignParentStart="true" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/spinner_lokasiBaru"
+        android:spinnerMode="dropdown"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/currentLoc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Keadaan Aset:"
+        android:id="@+id/suggestion"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:layout_below="@+id/spinner_lokasiBaru"
+        android:layout_alignParentStart="true" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/spinner_keadaanAset"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/spinner_lokasiBaru"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/suggestion" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/spinner_namaPegawai"
+        android:spinnerMode="dropdown"
+        android:layout_toEndOf="@+id/officername"
+        android:layout_marginLeft="30dp"
+        android:layout_above="@+id/originalLoc"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/displayassetname"
+        android:hint="assetName"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:layout_alignTop="@+id/asetname"
+        android:layout_alignStart="@+id/displayscanDate"
+        android:layout_above="@+id/officername"
+        android:layout_alignEnd="@+id/spinner_keadaanAset" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tarikh Imbas :"
+        android:id="@+id/scanDate"
+        android:textColor="@color/red"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/displayscanDate"
+        android:layout_alignParentTop="true"
+        android:hint="@string/scanDate"
+        android:layout_alignEnd="@+id/spinner_namaPegawai"
+        android:layout_toEndOf="@+id/scanDate"
+        android:ellipsize="end"
+        android:layout_above="@+id/displaynosiri"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView4"
+        android:hint="assetName"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:layout_alignBottom="@+id/spinner_namaPegawai"
+        android:layout_alignStart="@+id/spinner_namaPegawai"
+        android:layout_alignEnd="@+id/displaynosiri" />
+
+</RelativeLayout>
+
+
